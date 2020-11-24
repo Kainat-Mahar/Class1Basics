@@ -1,6 +1,4 @@
-
-
-name: Deploy_Website
+name: Website_on_surge
 
 # Controls when the action will run. 
 on:
@@ -29,10 +27,6 @@ jobs:
         uses: actions/setup-node@v2-beta
         with:
          node-version: 12
-      - name: Build  App
-        run: |
-        npm install # Install Dependencies
-        CI=false npm run build # CI=false to ignore warnings
       - name: Install Surge
         run: npm install -g surge
       - name: Run Surge
